@@ -63,13 +63,13 @@ def delete uid, params={}, api_key=nil
 def update uid, params={}, api_key=nil
 ```
 
-So this two are equivalent:
+So these two are equivalent:
 ```
 customer = Mango::Customers.create params
 customer = Mango.request :post, '/customers/', api_key, params
 ```
 
-This are the operations available for each resource:
+These are the operations available for each resource:
 
 |Resource|list|create|retrieve|update|delete|delete_all|
 |--------|:--:|:----:|:------:|:----:|:----:|:--------:|
