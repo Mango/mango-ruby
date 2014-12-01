@@ -38,7 +38,7 @@ params = {
 }
 
 begin
-  customer = Mango::Customer.create params
+  customer = Mango::Customers.create params
 rescue Mango::Error => e
   e.each {|code, message| ... }
 end
@@ -54,7 +54,7 @@ All the requests go through:
 Mango.request(method, url, api_key=nil, params={}, headers={})
 ```
 
-But you can use CRUD methods on `Mango::Card`, `Mango::Customer`...
+But you can use CRUD methods on `Mango::Cards`, `Mango::Customers`...
 ```
 def create params={}, api_key=nil
 def list params={}, api_key=nil
@@ -65,17 +65,17 @@ def update uid, params={}, api_key=nil
 
 So this two are equivalent:
 ```
-customer = Mango::Customer.create params
+customer = Mango::Customers.create params
 customer = Mango.request :post, '/customers/', api_key, params
 ```
 
 This are the operations available for each resource:
 
 |Resource|list|create|retrieve|update|delete|delete_all|
-|-|:-:|:-:|:-:|:-:|:-:|:-:|
-|Card         | x | x | x | x | x |   |
-|Charge       | x | x | x |   |   |   |
-|Customer     | x | x | x | x | x |   |
-|Installment  |   |   | x |   |   |   |
-|Queue        | x | x | x |   | x | x |
-|Refund       | x | x | x |   |   |   |
+|--------|:--:|:----:|:------:|:----:|:----:|:--------:|
+|Cards         | x | x | x | x | x |   |
+|Charges       | x | x | x |   |   |   |
+|Customers     | x | x | x | x | x |   |
+|Installments  |   |   | x |   |   |   |
+|Queue         | x | x | x |   | x | x |
+|Refunds       | x | x | x |   |   |   |
