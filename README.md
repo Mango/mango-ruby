@@ -15,15 +15,8 @@ https://getmango.com/
 As usual, you can install it using rubygems.
 
 ```
-$ gem build mango-ruby.gemspec
+$ gem install mango-ruby
 ```
-
-```
-$ gem install ./mango-ruby-0.0.1.gem
-```
-
-Note: We'll be uploading the gem to [RubyGems](https://rubygems.org) in the next couple of days.
-
 
 ## Usage
 
