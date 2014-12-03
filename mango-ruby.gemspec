@@ -5,8 +5,8 @@ Gem::Specification.new do |s|
   s.version           = "0.0.1"
   s.summary           = "Ruby wrapper for Mango API"
   s.description       = "API to interact with Mango\nhttps://getmango.com/"
-  s.authors           = ["Joaquín Vicente"]
-  s.email             = ["joakin@gmail.com"]
+  s.authors           = ["Mango development team", "Joaquín Vicente"]
+  s.email             = ["support@getmango.com"]
   s.homepage          = "https://getmango.com/"
   s.files             = []
 
