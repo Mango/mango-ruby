@@ -31,7 +31,7 @@ module Mango
   end
 
   class Installments < Resource
-    public_class_method :retrieve
+    public_class_method :list
   end
 
 end

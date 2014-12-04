@@ -76,6 +76,6 @@ This are the operations available for each resource:
 |Cards         | x | x | x | x | x |   |
 |Charges       | x | x | x |   |   |   |
 |Customers     | x | x | x | x | x |   |
-|Installments  |   |   | x |   |   |   |
+|Installments  | x |   |   |   |   |   |
 |Queue         | x | x | x |   | x | x |
 |Refunds       | x | x | x |   |   |   |
