@@ -36,8 +36,11 @@ module Mango
 
     payload = JSON.generate(params) if method == :post || method == :patch
 
+    params = params if method == :get
+
     headers = {
-      :content_type => 'application/json'
+      :content_type => 'application/json',
+      :params => params
     }.merge(headers)
 
     options = {
