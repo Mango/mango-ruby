@@ -30,20 +30,17 @@ module Mango
 
     url = @api_base + url
 
-    if method == :get
-    querystring = ""
-    params.each { |k,v| querystring += "#{k}=#{v}&" }
-    url = url + '?' + querystring
-    end
-
     unless api_key ||= @api_key
       raise Error.new('No API key provided')
     end
 
     payload = JSON.generate(params) if method == :post || method == :patch
 
+    params = params if method == :get
+
     headers = {
-      :content_type => 'application/json'
+      :content_type => 'application/json',
+      :params => params
     }.merge(headers)
 
     options = {
