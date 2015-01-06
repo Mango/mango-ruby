@@ -19,14 +19,20 @@ test "resource url" do
 end
 
 test "operation retrieve" do |mock|
-  mock.expects(:get).once.with('https://api.getmango.com/v1/customers/123/').returns(test_response(test_customer))
+  mock.expects(:get).once.with('https://api.getmango.com/v1/customers/123/', {}).returns(test_response(test_customer))
   customer = Mango::Customers.retrieve 123
   assert_equal "customer_hash", customer[:uid]
 end
 
 test "operation list" do |mock|
-  mock.expects(:get).once.with('https://api.getmango.com/v1/customers/').returns(test_response([test_customer]))
+  mock.expects(:get).once.with('https://api.getmango.com/v1/customers/', {}).returns(test_response([test_customer]))
   customers = Mango::Customers.list
+  assert_equal "customer_hash", customers.first[:uid]
+end
+
+test "aditional params on get" do |mock|
+  mock.expects(:get).once.with('https://api.getmango.com/v1/customers/', cardtype: 'visa').returns(test_response([test_customer]))
+  customers = Mango::Customers.list cardtype: 'visa'
   assert_equal "customer_hash", customers.first[:uid]
 end
 

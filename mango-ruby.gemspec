@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name              = "mango-ruby"
-  s.version           = "0.0.2"
+  s.version           = "0.0.3"
   s.summary           = "Ruby wrapper for Mango API"
   s.description       = "API to interact with Mango\nhttps://getmango.com/"
   s.authors           = ["Mango development team", "Joaquín Vicente"]

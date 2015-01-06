@@ -8,7 +8,7 @@ module Mango
   def self.execute_request(options)
     case options[:method]
     when :get
-      @mock_rest_client.get options[:url]
+      @mock_rest_client.get options[:url], options[:headers][:params]
     when :post
       @mock_rest_client.post options[:url], options[:payload]
     when :patch
