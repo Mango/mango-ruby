@@ -34,4 +34,8 @@ module Mango
     public_class_method :list
   end
 
+  class Promotions < Resource
+    public_class_method :retrieve, :list
+  end
+
 end

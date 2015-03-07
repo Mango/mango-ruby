@@ -72,3 +72,4 @@ These are the operations available for each resource:
 |Installments  | x |   |   |   |   |   |
 |Queue         | x | x | x |   | x | x |
 |Refunds       | x | x | x |   |   |   |
+|Promotions    | x |   | x |   |   |   |
