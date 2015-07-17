@@ -73,3 +73,4 @@ These are the operations available for each resource:
 |Queue         | x | x | x |   | x | x |
 |Refunds       | x | x | x |   |   |   |
 |Promotions    | x |   | x |   |   |   |
+|Coupons       | x | x | x | x |   |   |
