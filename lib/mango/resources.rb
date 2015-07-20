@@ -38,4 +38,8 @@ module Mango
     public_class_method :retrieve, :list
   end
 
+  class Coupons < Resource
+    public_class_method :create, :retrieve, :list, :update
+  end
+
 end
